@@ -1,215 +1,22 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-
-		<title>Base Project</title>
-
-		<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
-		<!-- <link rel="localizations" href="localizations/lang.json" type="application/vnd.oftn.l10n+json"/> -->
-
-		<script type="text/javascript" src="js/preload.js"></script>
-	</head>
-	<body>
-
-<head>
 	<meta charset="utf-8">
-	<title>De Profundis</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="description" content="De Profundis">
 	<meta name="author" content="J Tomasino">
+
+	<title>De Profundis</title>
+
+	<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+
+	<script type="text/javascript" src="js/preload.js"></script>
 	
 	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Sue+Ellen+Francisco' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
-
-	<style type="text/css">
-	
-		.chrome {
-			font-family: 'Rock Salt', cursive;
-		}
-		
-		.harrison {
-			font-family: 'Reenie Beanie', cursive;
-		}
-
-		.alberts {
-			font-family: 'Sue Ellen Francisco', cursive;
-		}
-		
-		.newspaper {
-			font-family: 'Special Elite', cursive;
-		}
-
-		.alberts p, .harrison p {
-			font-size: 20px;
-		}
-		
-		body {
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			background: #FFF; 
-			padding: 20px;
-		}
-
-		.wrapper {
-			margin: 0 auto;
-			max-width: 960px;
-		}
-
-		.head {
-			margin-bottom: 45px;
-		}
-		
-			.head h1 {
-				font-size: 30px;
-				letter-spacing: 0.2em;
-			}
-
-			.head h2 {
-				font-size: 17px;
-			}
-		
-		.sidebar {
-			text-align: center;
-			background: #fff;
-			padding: 20px 5px 40px 10px;
-			margin-top: 25px;
-			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-		}
-		
-			.sidebar h1 {
-				font-size: 20px;
-				
-				margin-bottom: 25px;
-			}
-
-			.sidebar h2 {
-				font-size: 17px;
-			}
-			
-		footer {
-			clear: both;
-		}
-		
-			footer p {
-				padding-top: 10px;
-				padding-bottom: 10px;
-				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-				font-size: 10px;
-			}
-
-		.sidebar {
-			float: left;
-			width: 250px;
-		}
-
-			.sidebar ol {
-				list-style-type: none;
-				font-size: 10px;
-				margin: 0;
-				padding: 0;
-			}
-			
-			.sidebar a {
-				color: #000;
-				text-decoration: none;
-			}
-			
-			.sidebar a:hover {
-				text-decoration: underline;
-			}
-		
-		.main {
-			float: left;
-			width: 650px;
-			margin: 0;
-		}
-		
-			.main h1 {
-				font-size: 20px;
-			}
-
-			.main h2 {
-				font-size: 17px;
-			}
-		
-		.letter {
-			margin-bottom: 90px;
-		}
-		
-		hr {
-			margin-right: 50px;
-			padding: 0;
-			padding-bottom: 30px;
-			border: none;
-			border-top: medium double #666;
-			color: #666;
-			text-align: center;
-		}
-		hr:after {
-			content: "§";
-			display: inline-block;
-			position: relative; 
-			top: -0.7em;  
-			font-size: 1.5em;
-			padding: 0 0.25em;
-			background: white;
-		}
-		
-		.clipping {
-			background: #EDEDED;
-			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-			margin: 26px 0 0;
-			padding: 24px;
-			position: relative;
-			width: 550px;
-		}
-		
-		.page {
-			background: #fff;
-			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-			margin: 26px 0 0;
-			padding: 24px;
-			position: relative;
-			width: 550px;
-			height: 600px;
-		}
-		
-			.page:before, .page:after {
-				content: "";
-				height: 98%;
-				position: absolute;
-				width: 100%;
-				z-index: -1;
-			}
-			
-			.page:before {
-				background: #fafafa;
-				box-shadow: 0 0 8px rgba(0,0,0,0.2);
-				left: -5px;
-				top: 4px;
-				transform: rotate(-2.5deg);
-				-ms-transform:rotate(-2.5deg); /* IE 9 */
-				-moz-transform:rotate(-2.5deg); /* Firefox */
-				-webkit-transform:rotate(-2.5deg); /* Safari and Chrome */
-				-o-transform:rotate(-2.5deg); /* Opera */
-			}
-			
-			.page:after {
-				background: #f6f6f6;
-				box-shadow: 0 0 3px rgba(0,0,0,0.2);
-				right: -3px;
-				top: 1px;
-				transform: rotate(1.4deg);
-				-ms-transform:rotate(1.4deg); /* IE 9 */
-				-moz-transform:rotate(1.4deg); /* Firefox */
-				-webkit-transform:rotate(1.4deg); /* Safari and Chrome */
-				-o-transform:rotate(1.4deg); /* Opera */
-			}
-
-	</style>
 
 </head>
 
@@ -220,78 +27,11 @@
 		<header class="head chrome">
 
 			<hgroup>
-				<h1>De Profundis - The Diary</h1>
+				<h1>De Profundis</h1>
 			</hgroup>
 
 		</header>
-
-		<div class="main">
-
-			<section id="section-1" class="letter harrison">
-				<section class="page">
-					<header>
-						<h1>Princeton, Sept 10, 1909</h1>
-						<h2>To H. H. Alberts; in New York City:</h2>
-					</header>
-					<p>MY DEAR ALBERTS, — I was in New York five days ago, and Webster mentioned the Library. The memory struck me like the dull bells of St. Paul's at Lauds; our evenings spent over pipe and page. It did my heart a great deal of ease to reflect fondly on our common time, but shocked me in the same moment with the realization of the gap that time has eroded between us. I knew at once that I must mend the condition and so set to paper at this earliest opportunity. </p>
-					<p>It seems strange to me now to conjure up my image of you, bolstered in stiff tweed, fresh as only spring linen can be. In my minds eye you are still but two and twenty. How foolish time makes us all seem, my friend. Do you still wear the penciled mustache? I, for one, am no small matter changed from what you must surely picture--though perhaps you saw the portrait done of me in the Times last year. Still, with all that our venerability has brought us, we cannot condemn the stray wrinkle or spot, can we?</p>
-					<p>Coincidence as it may seem, Webster's words were not the only cause of my rumination. ...Here's a secret. A most curious event that occurred just a few weeks prior to my trip to the City. Read these things, but don't mention them, I implore you. </p>
-				</section>
-				<section class="page">
-					<p>Last fall, my old mother—then 72—took a notion to attend a convention of old settlers of the rural town whence she lived all these years gone by. My brother's wife was astonished; and represented to her the hardships and fatigues of such a trip, and said my mother might possibly not even survive them; and said there could be no possible interest for her in such a meeting and such a crowd. But my mother insisted, and persisted; and finally gained her point. I, being still on summer holiday, was volunteered to accompany the antediluvian woman. We started; and all the way my mother was young again with excitement, interest, eagerness, anticipation. We reached the town and the hotel without incident. As I prepared to retire to my room, she burst forth with a strange wellspring of energy such as I haven't seen in years. It was her desire, as she put it, to venture forth right away. There was no stopping the old broad, Alberts! Weary as I was, it is the duty of every good and faithful christian to honor his parent, especially in their aged state; and so with great aplomb I offered my hand and did as she bid; went forth.</p>
-					<p>I shall not bore you with the many stoppings here and there which ate up our afternoon, but instead press forward to the event at the center of the incident. Upon the corner of two crossing backstreets in my mother's home town there stands a general store. It is one of those typical american centerpieces that is becoming more and more sparse. It struck me as an utterly wholesome building if buildings might be offered up such a morality: square windows, wide door, whitewashed porch complete with a rocking chair. It is, frankly, the very essence of America that is missing from the soul of my academic home in Princeton. I digress...</p>
-				</section>
-				<section class="page">
-					<p>Inside the store was a hodgepodge. Silk stockings, frock coats, knickers suits... and O! the books. I was crazy as a bedbug in those piles. Mother had wandered off doing... Search me... I was too absorbed in what I'd found. There, in a pile of haphazard novels and remedy books, was the Diary. At first I didn't recognize it; after all, it has been almost thirty years. Thirty years since the three of us sat down and started writing it as what... a joke? I can't even recall anymore. It was like the joke was being played on me in that store, Alberts. How could it possibly be there, waiting for me like that. You remember what we did, what we did with it.</p>
-					<p>To be honest, I was shaken deeply, but then mother was there again twittering on about a shell necklace and marigolds. The moment had passed. I won't lie to you. I took the diary with me in my coat pocket. It didn't feel right to pay for something we started... something I thought we finished. It's here with me now, in my study. I still haven't worked up the courage to open it past the first page. </p>
-					<p>Alberts, I am distraught. For all the world you are the only one I can talk to now, and yet the years have crept between us. Have you had any word from him since that night, since we burned the diary?</p>
-					<p>The school is once again in session and I must head to a lecture, so I shall bid you well. A hundred students of history will stare down at me in a few moments and I must compose myself before my own history consumes me.</p>
-					<p>Truly Yours, J. L. Harrison</p>
-				</section>
-			</section>
-			
-			<hr>
-			
-			<section id="section-2" class="letter alberts">
-				<section class="page">
-					<header>
-						<h1>Manhattan, New York City, Sept 19, 1909</h1>
-						<h2>To J.L. Harrison; in Princeton, N.J.:</h2>
-					</header>
-					<p>MR. HARRISON, – What a pleasant surprise I had opening the post the other day!  Seeing your letter amongst the daily humdrum of invoices was a joy.  I made sure that I had a cup of my favorite earl grey tea and was sitting comfortably in my study before opening it.  After reading the article in the Times and seeing your smart looking portrait there I had been meaning to write you, though life has its curious way of delaying the things that are truly the most important and we end up struggling against the daily slings and arrows instead of focusing our attention on what matters for our spiritual well-being.</p>
-					<p>I’m still managing the bank and now my eldest son, Reginald, has begun taking over many of the duties that I performed.  The accident has made it difficult to move about and in my condition the long hours are too much of a strain.  His youth and determination more than make up for my loss of capacity.  If you come back to New York you must meet him.</p>
-				</section>
-				<section class="page">
-					<p>The mustache!  I had pleasantly forgotten that ridiculous feature of my upper lip, but no, I leave the sharp fashions for the younger generations.  I am very fond of my, now very grey, beard which seems to be the mark of older, wiser individuals whom I would like to be associated with, even if merely by appearance.  Have I always been so vain?  We can curse the toll the years take upon our faces but in the end we must accept them.  No amount of scolding or gnashing will smooth our countenances.  Though, if I’m to believe my doctor, thinking younger thoughts reverses some of the trends of aging.  Have you heard such nonsense, my friend?  I think I need a new doctor!</p>	
-					<p>My disability brings me to the library quite often to set my mind free amongst the writings of Chaucer, Poe, and James.  I have also gotten to know one of the librarians well enough to get unsupervised access to their rare books collection.  Let me tell you, Harrison, you would be in Heaven here, leafing through the old tomes and first editions; the smell of decaying paper somehow breathes life into my soul.  The restricted section is still barred to me, though I would hate to revisit that room and relive the memories.</p>
-				</section>
-				<section class="page">	
-					<p>Five days, you say?  It pains me to tell you of his passing then.  Charles was found dead in his home early on the 6th of this month, but the constabulary have refused to tell anyone how he died.  If it was anything ordinary I’m sure they would have said.  I’ve included a clipping from the Tribune of his obituary.  The funeral was held at his home with his family and a few members from his lodge.  It was a nice service.  Morbid as it sounds, curiosity got the better of me and I took a long look at Charles in the open casket, covertly lifting up his collar and checking his hands while the rest of the attendants mingled around the refreshments, but didn’t notice anything irregular except that his clothes smelled faintly of incense.  Harrison, I don’t think I need to tell you what the scent was because you know it well.  We burned so much of it when we were all together in the old days.  It was a cold shock to smell it again and it sent shivers to my toes and stood my hairs on end but I thought it nothing more than coincidence or a strange trick of my nose.  That is, until I received your letter.</p>
-					<p>Webster and I had begun speaking again only a few years ago and we’ve had lunch a number of times since.  How was he when you spoke with him?  He was always a paranoid but what we did scarred him and my guilt has only been slightly assuaged by helping his wife with a modest monthly stipend.  She’s</p>
-				</section>
-				<section class="page">
-					<p>told me that poor Charles had never been able to keep a job and his seizures and hallucinations drove all away; it causes such a strain on Gail.  I feel we were responsible, in a way, for his condition pushing him further than he was comfortable and when we were done he was a shell.  During our last lunch, he stopped mid-sentence, the blood drained from his face, and his expression screwed into a manifestation of sheer terror.  Then looking off into the distance as if he were witnessing some unearthly horror rise up over my shoulder he began to chant, softly at first growing steadily in intensity and urgency.  His hand, still clutching his fork, began to shake making a rattling undercurrent to his verbal madness.  The chanting drew the frightened stares of the other restaurant clientele and if that was the first time I had seen Charles do this I would have been up in arms and yelling for a doctor.  Sadly this was normal.  I turned and reassured the other patrons that this was just a mental episode and it would pass and to please continue their conversations as if everything were normal.  My back was to Charles and I could see the maître d’ rapidly approach our table when Charles yelled out, “Aufwachen! Aufwachen! Seine Augen sind auf uns!“ and he abruptly fell silent; his fork hitting the floor was the only sound in the stunned parlor.  That was the last line in one of the diary entries I made.  What right did we have in pursuing this madness?  How irresponsible we</p>
-				</section>
-				<section class="page">
-					<p>were in our youth and still have not yet truly faced what we have done?  We should have stopped our research when Charles wanted out.  And when his sanity began to fade we should not have trusted him to burn the diary.  I do not know what he had done with it these past decades or how it ended up in your mother’s village, but from the smell of his old suit he must have still been using it.  I fear that others might have seen its contents and since reading your letter that thought keeps my nights restless and my days frought with worry.  May God have mercy on us and on poor Charles.</p>
-					<p>I tried to begin this letter with a happy heart but it sank quickly as I wrote.  If only our renewed correspondence started before this tragedy we’d have much lighter and frivolous things to write.  Jefferson, please do not read the diary.  Do not reopen the wounds that we caused so long ago. I implore you… burn it and scatter the ashes over water and let the vile secrets we discovered vanish in smoke and wave.  Then we can only hope that no one else dares follow the same dark path we did.</p>
-					<p>Warm Regards, H.H. Alberts</p>
-				</section>
-			</section>
-			
-			<hr>
-			
-			<section id="section-3" class="newspaper">
-				<header>
-					<h1>New-York Daily Tribune</h1>
-					<h2>Tuesday, September 7,  1909, page 7</h2>
-				</header>
-				<section class="clipping">
-					<p>WEBSTER – Suddenly on Monday, September 6, 1909.  CHARLES WEBSTER, in his 52nd year.  Son of the late George Webster and Mary Webster, husband of Gail Webster.  Relatives and friends of the family, also members of La Universal Lodge No. 751, F. and A. M., are respectfully invited to attend funeral services at his late residence, No. 109 East 38 st, on Thursday, September 9, at 3 P.M.  Kindly omit flowers.</p>
-				</section>
-			</section>
-		</div>
-
+		
 		<aside class="sidebar chrome">
 			<h1>The Story</h1>
 			<ol>
@@ -301,14 +41,60 @@
 			</ol>
 		</aside>
 
+
+		<div class="main">
+
+			<section id="section-1" class="letter harrison">
+				<header>
+					<h1>Princeton, Sept 10, 1909</h1>
+					<h2>To H. H. Alberts; in New York City:</h2>
+				</header>
+				<p>MY DEAR ALBERTS, — I was in New York five days ago, and Webster mentioned the Library. The memory struck me like the dull bells of St. Paul's at Lauds; our evenings spent over pipe and page. It did my heart a great deal of ease to reflect fondly on our common time, but shocked me in the same moment with the realization of the gap that time has eroded between us. I knew at once that I must mend the condition and so set to paper at this earliest opportunity. </p>
+				<p>It seems strange to me now to conjure up my image of you, bolstered in stiff tweed, fresh as only spring linen can be. In my minds eye you are still but two and twenty. How foolish time makes us all seem, my friend. Do you still wear the penciled mustache? I, for one, am no small matter changed from what you must surely picture--though perhaps you saw the portrait done of me in the Times last year. Still, with all that our venerability has brought us, we cannot condemn the stray wrinkle or spot, can we?</p>
+				<p>Coincidence as it may seem, Webster's words were not the only cause of my rumination. ...Here's a secret. A most curious event that occurred just a few weeks prior to my trip to the City. Read these things, but don't mention them, I implore you. </p>
+				<p>Last fall, my old mother—then 72—took a notion to attend a convention of old settlers of the rural town whence she lived all these years gone by. My brother's wife was astonished; and represented to her the hardships and fatigues of such a trip, and said my mother might possibly not even survive them; and said there could be no possible interest for her in such a meeting and such a crowd. But my mother insisted, and persisted; and finally gained her point. I, being still on summer holiday, was volunteered to accompany the antediluvian woman. We started; and all the way my mother was young again with excitement, interest, eagerness, anticipation. We reached the town and the hotel without incident. As I prepared to retire to my room, she burst forth with a strange wellspring of energy such as I haven't seen in years. It was her desire, as she put it, to venture forth right away. There was no stopping the old broad, Alberts! Weary as I was, it is the duty of every good and faithful christian to honor his parent, especially in their aged state; and so with great aplomb I offered my hand and did as she bid; went forth.</p>
+				<p>I shall not bore you with the many stoppings here and there which ate up our afternoon, but instead press forward to the event at the center of the incident. Upon the corner of two crossing backstreets in my mother's home town there stands a general store. It is one of those typical american centerpieces that is becoming more and more sparse. It struck me as an utterly wholesome building if buildings might be offered up such a morality: square windows, wide door, whitewashed porch complete with a rocking chair. It is, frankly, the very essence of America that is missing from the soul of my academic home in Princeton. I digress...</p>
+				<p>Inside the store was a hodgepodge. Silk stockings, frock coats, knickers suits... and O! the books. I was crazy as a bedbug in those piles. Mother had wandered off doing... Search me... I was too absorbed in what I'd found. There, in a pile of haphazard novels and remedy books, was the Diary. At first I didn't recognize it; after all, it has been almost thirty years. Thirty years since the three of us sat down and started writing it as what... a joke? I can't even recall anymore. It was like the joke was being played on me in that store, Alberts. How could it possibly be there, waiting for me like that. You remember what we did, what we did with it.</p>
+				<p>To be honest, I was shaken deeply, but then mother was there again twittering on about a shell necklace and marigolds. The moment had passed. I won't lie to you. I took the diary with me in my coat pocket. It didn't feel right to pay for something we started... something I thought we finished. It's here with me now, in my study. I still haven't worked up the courage to open it past the first page. </p>
+				<p>Alberts, I am distraught. For all the world you are the only one I can talk to now, and yet the years have crept between us. Have you had any word from him since that night, since we burned the diary?</p>
+				<p>The school is once again in session and I must head to a lecture, so I shall bid you well. A hundred students of history will stare down at me in a few moments and I must compose myself before my own history consumes me.</p>
+				<p>Truly Yours, J. L. Harrison</p>
+			</section>
+			
+			<hr>
+
+			<section id="section-2" class="letter alberts">
+				<header>
+					<h1>Manhattan, New York City, Sept 19, 1909</h1>
+					<h2>To J.L. Harrison; in Princeton, N.J. -</h2>
+				</header>
+				<p>MR. HARRISON, – What a pleasant surprise I had opening the post the other day!  Seeing your letter amongst the daily humdrum of invoices was a joy.  I made sure that I had a cup of my favorite earl grey tea and was sitting comfortably in my study before opening it.  After reading the article in the Times and seeing your smart looking portrait there I had been meaning to write you, though life has its curious way of delaying the things that are truly the most important and we end up struggling against the daily slings and arrows instead of focusing our attention on what matters for our spiritual well-being.</p>
+				<p>I’m still managing the bank and now my eldest son, Reginald, has begun taking over many of the duties that I performed.  The accident has made it difficult to move about and in my condition the long hours are too much of a strain.  His youth and determination more than make up for my loss of capacity.  If you come back to New York you must meet him.</p>
+				<p>The mustache!  I had pleasantly forgotten that ridiculous feature of my upper lip, but no, I leave the sharp fashions for the younger generations.  I am very fond of my, now very grey, beard which seems to be the mark of older, wiser individuals whom I would like to be associated with, even if merely by appearance.  Have I always been so vain?  We can curse the toll the years take upon our faces but in the end we must accept them.  No amount of scolding or gnashing will smooth our countenances.  Though, if I’m to believe my doctor, thinking younger thoughts reverses some of the trends of aging.  Have you heard such nonsense, my friend?  I think I need a new doctor!</p>	
+				<p>My disability brings me to the library quite often to set my mind free amongst the writings of Chaucer, Poe, and James.  I have also gotten to know one of the librarians well enough to get unsupervised access to their rare books collection.  Let me tell you, Harrison, you would be in Heaven here, leafing through the old tomes and first editions; the smell of decaying paper somehow breathes life into my soul.  The restricted section is still barred to me, though I would hate to revisit that room and relive the memories.</p>
+				<p>Five days, you say?  It pains me to tell you of his passing then.  Charles was found dead in his home early on the 6th of this month, but the constabulary have refused to tell anyone how he died.  If it was anything ordinary I’m sure they would have said.  I’ve included a clipping from the Tribune of his obituary.  The funeral was held at his home with his family and a few members from his lodge.  It was a nice service.  Morbid as it sounds, curiosity got the better of me and I took a long look at Charles in the open casket, covertly lifting up his collar and checking his hands while the rest of the attendants mingled around the refreshments, but didn’t notice anything irregular except that his clothes smelled faintly of incense.  Harrison, I don’t think I need to tell you what the scent was because you know it well.  We burned so much of it when we were all together in the old days.  It was a cold shock to smell it again and it sent shivers to my toes and stood my hairs on end but I thought it nothing more than coincidence or a strange trick of my nose.  That is, until I received your letter.</p>
+				<p>Webster and I had begun speaking again only a few years ago and we’ve had lunch a number of times since.  How was he when you spoke with him?  He was always a paranoid but what we did scarred him and my guilt has only been slightly assuaged by helping his wife with a modest monthly stipend.  She’s told me that poor Charles had never been able to keep a job and his seizures and hallucinations drove all away; it causes such a strain on Gail.  I feel we were responsible, in a way, for his condition pushing him further than he was comfortable and when we were done he was a shell.  During our last lunch, he stopped mid-sentence, the blood drained from his face, and his expression screwed into a manifestation of sheer terror.  Then looking off into the distance as if he were witnessing some unearthly horror rise up over my shoulder he began to chant, softly at first growing steadily in intensity and urgency.  His hand, still clutching his fork, began to shake making a rattling undercurrent to his verbal madness.  The chanting drew the frightened stares of the other restaurant clientele and if that was the first time I had seen Charles do this I would have been up in arms and yelling for a doctor.  Sadly this was normal.  I turned and reassured the other patrons that this was just a mental episode and it would pass and to please continue their conversations as if everything were normal.  My back was to Charles and I could see the maître d’ rapidly approach our table when Charles yelled out, “Aufwachen! Aufwachen! Seine Augen sind auf uns!“ and he abruptly fell silent; his fork hitting the floor was the only sound in the stunned parlor.  That was the last line in one of the diary entries I made.  What right did we have in pursuing this madness?  How irresponsible we were in our youth and still have not yet truly faced what we have done?  We should have stopped our research when Charles wanted out.  And when his sanity began to fade we should not have trusted him to burn the diary.  I do not know what he had done with it these past decades or how it ended up in your mother’s village, but from the smell of his old suit he must have still been using it.  I fear that others might have seen its contents and since reading your letter that thought keeps my nights restless and my days frought with worry.  May God have mercy on us and on poor Charles.</p>
+				<p>I tried to begin this letter with a happy heart but it sank quickly as I wrote.  If only our renewed correspondence started before this tragedy we’d have much lighter and frivolous things to write.  Jefferson, please do not read the diary.  Do not reopen the wounds that we caused so long ago. I implore you… burn it and scatter the ashes over water and let the vile secrets we discovered vanish in smoke and wave.  Then we can only hope that no one else dares follow the same dark path we did.</p>
+				<p>Warm Regards, H.H. Alberts</p>
+			</section>
+			
+			<hr>
+
+			<section id="section-3" class="newspaper clipping">
+				<header>
+					<h1>New-York Daily Tribune</h1>
+					<h2>Tuesday, September 7,  1909, page 7</h2>
+				</header>
+				<p>WEBSTER – Suddenly on Monday, September 6, 1909.  CHARLES WEBSTER, in his 52nd year.  Son of the late George Webster and Mary Webster, husband of Gail Webster.  Relatives and friends of the family, also members of La Universal Lodge No. 751, F. and A. M., are respectfully invited to attend funeral services at his late residence, No. 109 East 38 st, on Thursday, September 9, at 3 P.M.  Kindly omit flowers.</p>
+			</section>
+		</div>
+
 		<footer class="footer chrome">
 			<p>Copyright &copy; 2013</p>
 		</footer>
 
 	</div>
 
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery-1.6.4.min.js"%3E%3C/script%3E'))</script> 
-
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

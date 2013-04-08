@@ -2,14 +2,219 @@
 @import "compass";
 @import "compass/reset";
 @import "compass/css3";
-@import "compass/typography/vertical_rhythm";
 
-// Plugins
-@import "sassy-buttons";
+$break-full: 990px;
+$break-tablet: 750px;
+$break-phone: 469px;
+$break-zero: 0;
 
-// Project
-@import "mixins";
-@import "lib/lib";
-@import "variables";
-@import "layout/layout";
-@import "type/type";
+@mixin responsive($media) {
+	@if $media == full {
+		@media only screen and (min-width: $break-full) { @content; }
+	}
+	@else if $media == tablet {
+		@media only screen and (min-width: $break-tablet) and (max-width: $break-full - 1) { @content; }
+	}
+	@else if $media == phone {
+		@media only screen and (min-width: $break-phone) and (max-width: $break-tablet - 1) { @content; }
+	}
+	@else if $media == zero {
+		@media only screen and (min-width: $break-zero) and (max-width: $break-phone - 1) { @content; }
+	}
+}
+
+.wrapper {
+	@include box-sizing(border-box);
+	display: block;
+	position: relative;
+	margin: 25px auto;
+
+	@include responsive(full) {
+		width: 990px;
+	}
+	@include responsive(tablet) {
+		width: 750px;
+	}
+	@include responsive(phone) {
+		width: 469px;
+	}
+	@include responsive(zero) {
+		width: auto;
+	}
+
+	.head {
+		position: relative;
+		text-align: center;
+		margin: 0 10px 45px 10px;
+
+		h1 {
+			font-size: 30px;
+			letter-spacing: 0.2em;
+		}
+
+		h2 {
+			font-size: 17px;
+		}
+	}
+
+	.sidebar {
+		display: block;
+		position: relative;
+		text-align: center;
+		background: #fff;
+		padding: 20px 5px 40px 10px;
+		margin: 25px auto;
+		box-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+		@include responsive(full) {
+			width: 300px;
+		}
+		@include responsive(tablet) {
+			width: 300px;
+		}
+		@include responsive(phone) {
+			width: 300px;
+		}
+		@include responsive(zero) {
+			width: auto;
+		}
+
+		h1 {
+			font-size: 20px;
+
+			margin-bottom: 25px;
+		}
+
+		h2 {
+			font-size: 17px;
+		}
+
+		ol {
+			list-style-type: none;
+			font-size: 10px;
+			margin: 0;
+			padding: 0;
+
+			li {
+				margin-bottom: 8px;
+			}
+		}
+
+		a {
+			color: #000;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	footer {
+		p {
+			padding-top: 30px;
+			padding-bottom: 10px;
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 10px;
+		}
+	}
+
+	.main {
+		position: relative;
+		margin: 0;
+
+		@include responsive(full) {
+			width: $break-full;
+		}
+		@include responsive(tablet) {
+			width: $break-tablet;
+		}
+		@include responsive(phone) {
+			width: $break-phone;
+		}
+		@include responsive(zero) {
+			width: auto;
+			margin: 0 10px;
+		}
+
+		h1 {
+			font-size: 20px;
+			position: relative;
+			margin-bottom: 5px;
+		}
+
+		h2 {
+			font-size: 17px;
+			position: relative;
+			margin-bottom: 10px;
+		}
+
+		.letter {
+			padding-top: 15px;
+			margin-bottom: 90px;
+		}
+
+		.clipping {
+			background: #EDEDED;
+			box-shadow: 0 0 10px rgba(0,0,0,0.3);
+			margin: 26px 0 0;
+			padding: 24px;
+			position: relative;
+			max-width: 550px;
+		}
+	}
+}
+
+/* Flaired edges, by Tomas Theunissen */
+
+hr {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+
+/*************** FONTS ******************/
+
+.chrome {
+	font-family: 'Rock Salt', cursive;
+}
+
+.harrison {
+	font-family: 'Reenie Beanie', cursive;
+	line-height: 1.1em;
+	font-size: 24px;
+
+	p {
+		margin-top: 10px;
+		text-indent: 20px;
+	}
+}
+
+.alberts {
+	font-family: 'Sue Ellen Francisco', cursive;
+	line-height: 1.3em;
+	font-size: 22px;
+
+	p {
+		margin-top: 16px;
+		text-indent: 30px;
+	}
+}
+
+.newspaper {
+	font-family: 'Special Elite', cursive;
+}
