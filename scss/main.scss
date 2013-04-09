@@ -149,15 +149,26 @@ $break-zero: 0;
 			margin-bottom: 10px;
 		}
 
+		h3 {
+			font-size: 15px;
+			line-height: 17px;
+			position: relative;
+			margin-bottom: 0px;
+		}
+
 		.letter {
 			padding-top: 15px;
 			margin-bottom: 90px;
+
+			blockquote {
+				margin-left: 20px;
+			}
 		}
 
 		.clipping {
 			background: #EDEDED;
 			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-			margin: 26px auto 0 auto;
+			margin: 26px auto 50px auto;
 			padding: 24px;
 			position: relative;
 			max-width: 550px;
@@ -187,8 +198,6 @@ hr:before { /* Not really supposed to work, but does */
 }
 
 
-/*************** FONTS ******************/
-
 .chrome {
 	font-family: 'Rock Salt', cursive;
 }
@@ -212,6 +221,24 @@ hr:before { /* Not really supposed to work, but does */
 	p {
 		margin-top: 16px;
 		text-indent: 30px;
+	}
+}
+
+.wyndham {
+	font-family: 'Nothing You Could Do', cursive;
+	line-height: 1.1em;
+	font-size: 18px;
+
+	p {
+		margin-top: 20px;
+	}
+
+	blockquote {
+		margin-top: 20px;
+
+		p {
+			margin-top: 8px;
+		}
 	}
 }
 
