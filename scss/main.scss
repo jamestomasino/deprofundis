@@ -3,14 +3,18 @@
 @import "compass/reset";
 @import "compass/css3";
 
+$break-wide: 1280px;
 $break-full: 990px;
 $break-tablet: 750px;
 $break-phone: 469px;
 $break-zero: 0;
 
 @mixin responsive($media) {
-	@if $media == full {
-		@media only screen and (min-width: $break-full) { @content; }
+	@if $media == wide {
+		@media only screen and (min-width: $break-wide) { @content; }
+	}
+	@else if $media == full {
+		@media only screen and (min-width: $break-full) and (max-width: $break-wide - 1){ @content; }
 	}
 	@else if $media == tablet {
 		@media only screen and (min-width: $break-tablet) and (max-width: $break-full - 1) { @content; }
@@ -33,6 +37,9 @@ em {
 	position: relative;
 	margin: 25px auto;
 
+	@include responsive(wide) {
+		width: 1280px;
+	}
 	@include responsive(full) {
 		width: 990px;
 	}
@@ -70,6 +77,9 @@ em {
 		margin: 25px auto;
 		box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
+		@include responsive(wide) {
+			width: 300px;
+		}
 		@include responsive(full) {
 			width: 300px;
 		}
@@ -120,6 +130,7 @@ em {
 			padding-bottom: 10px;
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 			font-size: 10px;
+			text-align: center;
 		}
 	}
 
@@ -127,6 +138,9 @@ em {
 		position: relative;
 		margin: 0;
 
+		@include responsive(full) {
+			width: $break-wide;
+		}
 		@include responsive(full) {
 			width: $break-full;
 		}
@@ -176,6 +190,22 @@ em {
 			padding: 24px;
 			position: relative;
 			max-width: 550px;
+		}
+
+		section {
+			@include responsive(wide) {
+				@include columns(400px 3);
+			}
+			@include responsive(full) {
+				@include columns(460px 2);
+			}
+			@include responsive(tablet) {
+			}
+			@include responsive(phone) {
+			}
+			@include responsive(zero) {
+			}
+
 		}
 	}
 }
