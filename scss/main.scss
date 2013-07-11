@@ -23,6 +23,10 @@ $break-zero: 0;
 	}
 }
 
+em {
+	font-style:italic;
+}
+
 .wrapper {
 	@include box-sizing(border-box);
 	display: block;
