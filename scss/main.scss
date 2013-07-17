@@ -31,6 +31,10 @@ em {
 	font-style:italic;
 }
 
+body {
+	@include background ( url(../images/paper.jpg) );
+}
+
 .wrapper {
 	@include box-sizing(border-box);
 	display: block;
@@ -59,12 +63,10 @@ em {
 		margin: 0 10px 45px 10px;
 
 		h1 {
-			font-size: 30px;
+			font-family: 'Special Elite', cursive;
+			font-size: 33px;
+			color: rgba(0,0,0,0.8);
 			letter-spacing: 0.2em;
-		}
-
-		h2 {
-			font-size: 17px;
 		}
 	}
 
@@ -72,50 +74,14 @@ em {
 		display: block;
 		position: relative;
 		text-align: center;
-		background: #fff;
-		padding: 20px 5px 40px 10px;
 		margin: 25px auto;
-		box-shadow: 0 0 10px rgba(0,0,0,0.3);
 
-		@include responsive(wide) {
-			width: 300px;
-		}
-		@include responsive(full) {
-			width: 300px;
-		}
-		@include responsive(tablet) {
-			width: 300px;
-		}
-		@include responsive(phone) {
-			width: 300px;
-		}
 		@include responsive(zero) {
 			width: auto;
 		}
 
-		h1 {
-			font-size: 20px;
-
-			margin-bottom: 25px;
-		}
-
-		h2 {
-			font-size: 17px;
-		}
-
-		ol {
-			list-style-type: none;
-			font-size: 10px;
-			margin: 0;
-			padding: 0;
-
-			li {
-				margin-bottom: 8px;
-			}
-		}
-
 		a {
-			color: #000;
+			color: inherit;
 			text-decoration: none;
 
 			&:hover {
@@ -124,38 +90,7 @@ em {
 		}
 	}
 
-	footer {
-		p {
-			padding-top: 30px;
-			padding-bottom: 10px;
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 10px;
-			text-align: center;
-		}
-	}
-
-	.main {
-		position: relative;
-		margin: 0;
-
-		@include responsive(full) {
-			width: $break-wide;
-		}
-		@include responsive(full) {
-			width: $break-full;
-		}
-		@include responsive(tablet) {
-			width: $break-tablet;
-		}
-		@include responsive(phone) {
-			width: $break-phone;
-		}
-		@include responsive(zero) {
-			width: auto;
-			margin: 0 10px;
-		}
-
-		h1 {
+	h1 {
 			font-size: 20px;
 			position: relative;
 			margin-bottom: 5px;
@@ -183,30 +118,56 @@ em {
 			}
 		}
 
-		.clipping {
-			background: #EDEDED;
-			box-shadow: 0 0 10px rgba(0,0,0,0.3);
-			margin: 26px auto 50px auto;
-			padding: 24px;
-			position: relative;
-			max-width: 550px;
+	footer {
+		p {
+			font-family: 'Special Elite', cursive;
+			font-size: 20px;
+			text-align: center;
+			color: rgba(0,0,0,0.8);
+			padding-top: 30px;
+			padding-bottom: 10px;
+		}
+	}
+
+
+	section {
+		@include responsive(wide) {
+			@include columns(400px 3);
+		}
+		@include responsive(full) {
+			@include columns(460px 2);
+		}
+		@include responsive(tablet) {
+		}
+		@include responsive(phone) {
+		}
+		@include responsive(zero) {
 		}
 
-		section {
-			@include responsive(wide) {
-				@include columns(400px 3);
-			}
-			@include responsive(full) {
-				@include columns(460px 2);
-			}
-			@include responsive(tablet) {
-			}
-			@include responsive(phone) {
-			}
-			@include responsive(zero) {
-			}
+	}
 
+
+	.main {
+		position: relative;
+		margin: 0;
+
+		@include responsive(full) {
+			width: $break-wide;
 		}
+		@include responsive(full) {
+			width: $break-full;
+		}
+		@include responsive(tablet) {
+			width: $break-tablet;
+		}
+		@include responsive(phone) {
+			width: $break-phone;
+		}
+		@include responsive(zero) {
+			width: auto;
+			margin: 0 10px;
+		}
+
 	}
 }
 
@@ -232,12 +193,11 @@ hr:before { /* Not really supposed to work, but does */
 }
 
 
-.chrome {
-	font-family: 'Rock Salt', cursive;
-}
+/********** WRITING STYLES ************/
 
 .harrison {
 	font-family: 'Reenie Beanie', cursive;
+	color: rgba(81,44,15,.9);
 	line-height: 1.1em;
 	font-size: 24px;
 
@@ -249,6 +209,7 @@ hr:before { /* Not really supposed to work, but does */
 
 .alberts {
 	font-family: 'Sue Ellen Francisco', cursive;
+	color: rgba(11,4,15,.9);
 	line-height: 1.3em;
 	font-size: 22px;
 
@@ -276,6 +237,18 @@ hr:before { /* Not really supposed to work, but does */
 	}
 }
 
-.newspaper {
+.clipping {
 	font-family: 'Special Elite', cursive;
+	@include background ( url(../images/newspaper.jpg) );
+	color: rgba(50, 50, 50, 0.8);
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	margin: 26px auto 50px auto;
+	padding: 24px;
+	position: relative;
+	max-width: 550px;
+
+	p, li {
+		line-height: 1.2em;
+	}
 }
+
