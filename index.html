@@ -24,10 +24,10 @@
 
 	<div class="wrapper">
 
-		<header class="head">
+		<header id="fonttoggle" class="head">
 			<h1>De Profundis</h1>
 		</header>
-		
+
 		<aside class="sidebar clipping">
 			<header>
 				<h1>The Story</h1>
@@ -248,5 +248,14 @@
 
 	</div>
 
+	<script type="text/javascript">
+		document.getElementById('fonttoggle').addEventListener('click', function () {
+			if (document.body.classList.contains('nofont')) {
+				document.body.classList.remove('nofont');
+			} else {
+				document.body.classList.add('nofont');
+			}
+		});
+	</script>
 </body>
 </html>

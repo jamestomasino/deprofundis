@@ -274,6 +274,16 @@ hr:before {
   font-size: 22px;
 }
 
+.nofont .harrison,
+.nofont .alberts,
+.nofont .gail,
+.nofont .wyndham,
+.nofont .bernice
+{
+	font-family: Arial !important;
+	font-size: 12px !important;
+	line-height: 1.4;
+}
 
 .clipping {
   font-family: 'Special Elite', cursive;
@@ -285,6 +295,11 @@ hr:before {
   position: relative;
   max-width: 550px;
 }
+
 .clipping p, .clipping li {
   line-height: 1.2em;
+}
+
+.sidebar.clipping li {
+  line-height: 1.6em;
 }
