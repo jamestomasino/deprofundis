@@ -274,11 +274,21 @@ hr:before {
   font-size: 22px;
 }
 
+.webster {
+  font-family: 'Amatic SC', cursive;
+  line-height: 1.4;
+  font-size: 22px;
+}
+.webster p {
+  margin-top: 10px;
+}
+
 .nofont .harrison,
 .nofont .alberts,
 .nofont .gail,
 .nofont .wyndham,
-.nofont .bernice
+.nofont .bernice,
+.nofont .webster
 {
 	font-family: Arial !important;
 	font-size: 12px !important;
